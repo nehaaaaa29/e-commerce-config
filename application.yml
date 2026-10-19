@@ -1,7 +1,19 @@
-#eureka config
-eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+server:
+  port: 8888
 
-management:
-    web:
-      exposure:
-        include: "*"
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+        # Agar repository public hai, toh username/password ki zaroorat nahi hai. 
+        # Agar private hai toh rakh sakti hain.
+          uri: https://github.com/nehaaaaa29/e-commerce-config
+          default-label: main
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
