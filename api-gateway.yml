@@ -15,7 +15,7 @@ spring:
             - Path=/inventory/**
 
 jwt:
-  secretKey: " yahan_apni_koi_bhi_strong_secret_key_likh_dein_kam_se_kam_32_characters_ki "
+  secretKey: "mysecretkeyforjwtauthenticationthatisshouldbelongenough"
 
 eureka:
   client:
